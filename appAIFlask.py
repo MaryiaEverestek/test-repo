@@ -51,7 +51,8 @@ def consume():
             metadata.update({"question": question, "response": response})
 
             # texts.append(response)
-            texts.append((question, response))
+            # texts.append((question, response))
+            texts.append(question + " - " + response)
             metadata_list.append(metadata)
 
         vector_store.add_texts(texts=texts, metadatas=metadata_list)
@@ -94,4 +95,4 @@ def semantic_search():
 
 if __name__ == '__main__':
     # app.run(debug=True)
-    app.run(host='0.0.0.0', debug=True)
+    app.run(host='0.0.0.0', debug=True, port=8080)
