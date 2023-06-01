@@ -50,7 +50,8 @@ def consume():
 
             metadata.update({"question": question, "response": response})
 
-            texts.append(response)
+            # texts.append(response)
+            texts.append((question, response))
             metadata_list.append(metadata)
 
         vector_store.add_texts(texts=texts, metadatas=metadata_list)
