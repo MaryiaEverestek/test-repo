@@ -18,6 +18,6 @@ WORKDIR /app
 # Add the current directory contents into the container at /app
 ADD . /app
 
-EXPOSE 5000
+EXPOSE 8080
 
 ENTRYPOINT ["flask", "--app", "appAIFlask.py", "run", "--host=0.0.0.0"]
